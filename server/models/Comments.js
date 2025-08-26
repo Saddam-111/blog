@@ -13,7 +13,11 @@ const commentSchema = new mongoose.Schema({
   },
   content: {
     type: String,
-    default: true
+    required: true
+  },
+  isApproved: {
+    type: Boolean,
+    default: false,   // new comments start as not approved
   }
 }, {timestamps: true})
 

@@ -109,6 +109,8 @@ const Comments = () => {
                   onApprove = {(id) => {
                     setComments(prev => prev.map(comment => comment._id === id ? {...comment, isApproved: true} : comment))
                   }}
+                  onDelete={(id) => {setComments(prev => prev.filter(comment => comment._id !== id))                    
+                  }}
                 />
               ))
             )}

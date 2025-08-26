@@ -71,7 +71,7 @@ const Blog = () => {
       <img src={assets.gradientBackground} alt="background" className="absolute top-0 left-0 w-full h-72 object-cover -z-10" />
       <Navbar />
 
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 py-16 space-y-12 bg-white shadow-lg rounded-xl mt-10">
+      <div className="max-w-5xl mx-auto px-6 sm:px-10 py-16 space-y-12 bg-white shadow-2xl shadow-[#656565]  rounded-xl mt-10 mb-4">
         {/* Blog Header */}
         <div className="text-center space-y-2">
           <p className="text-sm text-gray-500">Published on {Moment(data.createdAt).format('MMMM Do YYYY')}</p>

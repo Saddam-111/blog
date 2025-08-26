@@ -4,7 +4,7 @@ import { useBlogContext } from '../../../context/BlogContext';
 import toast from 'react-hot-toast';
 import Moment from 'moment';
 
-const CommentTableItem = ({ comment, fetchComments, onApprove }) => {
+const CommentTableItem = ({ comment, fetchComments, onApprove, onDelete }) => {
   const { blog, createdAt, _id, name, content, isApproved } = comment;
   const { axios } = useBlogContext();
 
@@ -18,7 +18,10 @@ const CommentTableItem = ({ comment, fetchComments, onApprove }) => {
     if (data.success) {
       toast.success(data.message);
       onApprove(_id);
-      fetchComments(); // ✅ This must re-fetch fresh updated comments
+      // fetchComments(); // ✅ This must re-fetch fresh updated comments
+      if(onDelete){
+        onDelete(_id)
+      }
     } else {
       toast.error(data.message);
     }
