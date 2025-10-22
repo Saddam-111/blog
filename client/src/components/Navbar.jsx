@@ -21,7 +21,7 @@ const Navbar = () => {
         alt="logo"
         whileHover={{ rotate: 10, scale: 1.1 }}
         transition={{ type: "spring", stiffness: 200 }}
-        className="w-12 sm:w-16 md:w-20 cursor-pointer drop-shadow-lg"
+        className="w-12 sm:w-10 md:w-12 cursor-pointer drop-shadow-lg"
       />
 
       {/* Right Side Button */}
